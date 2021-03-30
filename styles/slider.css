@@ -1,3 +1,10 @@
+:root {
+  --light: hsl(260, 18%, 90%);
+  --light-mid: hsl(260, 18%, 80%);
+  --mid: hsl(260, 18%, 70%);
+  --deep: hsl(260, 18%, 20%);
+}
+
 .slider {
   -webkit-appearance: none;
   width: 150px;

@@ -1,16 +1,17 @@
 :root {
   --speed: 0.8s;
-  --light: hsl(260, 18%, 90%);
-  --light-mid: hsl(260, 18%, 80%);
-  --mid: hsl(260, 18%, 70%);
-  --deep: hsl(260, 18%, 20%);
   --dir: 1;
   --delay: 0s;
+  --border-radius: 50%;
+  --hue-offset: 60;
+  --hue-one: 90;
+  --hue-two: calc(var(--hue-one) + var(--hue-offset));
 }
 
 body {
   box-sizing: border-box;
   background: #000;
+  color: grey;
 }
 
 ul, li {
@@ -45,11 +46,12 @@ ul, li {
 .conic-spinner {
   background: conic-gradient( 
     black 0deg 90deg, 
-    hsl(78, 100%, 43%) 90deg 180deg, 
-    black 180deg 270deg, 
-    hsl(170, 100%, 39%) 270deg
+    hsl(var(--hue-one), 50%, 50%) 90deg 180deg, 
+    black 180deg 270deg,
+    hsl(var(--hue-two), 50%, 50%) 270deg
   );
-  border-radius: 50%;
+  mix-blend-mode: screen;
+  border-radius: var(--border-radius);
   width: 6vmin;
   height: 6vmin;
   opacity: 0;
