@@ -31,7 +31,7 @@ ul, li {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  max-width: 40vmax;
+  max-width: 60vmin;
 }
 
 .conic-spinner.normal {
@@ -50,13 +50,10 @@ ul, li {
     turquoise 270deg
   );
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
+  width: 6vmin;
+  height: 6vmin;
+  opacity: 0;
   animation: spin var(--speed) linear var(--delay) infinite;
-}
-
-.m-t-20 {
-  margin-top: 20px;
 }
 
 @keyframes spin {
@@ -72,4 +69,16 @@ ul, li {
     opacity: 0;
     transform: rotate(360deg);
   }
+}
+
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.m-t-30 {
+  margin-top: 30px;
 }
