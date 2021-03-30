@@ -1,9 +1,8 @@
 # Spinner pattern wave 🍃
 
-Experimenting with CSS to create an interactive pattern. 
+Experimenting with CSS animation to create an interactive pattern. 
 
-
-### How is works
+### How it works ⚙️
 - The grid is made up of spinning circles or spinners
 - Each spinner uses a conic-gradient background to make a 4-quartered circle
 - Each 360 degree rotation goes from transitions from 0 to 1 in opacity
@@ -16,4 +15,4 @@ Experimenting with CSS to create an interactive pattern.
 + [Source code](https://replit.com/@RolandJLevy/css-conic-gradient-spinner-pattern-wave)
 + [Github repo](https://github.com/rolandjlevy/css-conic-gradient-spinner-pattern-wave)
 
-![Avocados](https://raw.githubusercontent.com/rolandjlevy/css-hypnotic-wave-of-psychedelic-avocados/master/images/avocados.png)
+![Spinners](https://github.com/)
