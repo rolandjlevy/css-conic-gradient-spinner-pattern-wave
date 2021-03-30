@@ -15,4 +15,4 @@ Experimenting with CSS animation to create an interactive pattern.
 + [Source code](https://replit.com/@RolandJLevy/css-conic-gradient-spinner-pattern-wave)
 + [Github repo](https://github.com/rolandjlevy/css-conic-gradient-spinner-pattern-wave)
 
-![Spinners](https://github.com/)
+![Spinners](https://raw.githubusercontent.com/rolandjlevy/css-conic-gradient-spinner-pattern-wave/master/images/spinner-wave-pattern.png)
