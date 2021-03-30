@@ -1,0 +1,75 @@
+:root {
+  --speed: 0.8s;
+  --light: hsl(260, 18%, 90%);
+  --light-mid: hsl(260, 18%, 80%);
+  --mid: hsl(260, 18%, 70%);
+  --deep: hsl(260, 18%, 20%);
+  --dir: 1;
+  --delay: 0s;
+}
+
+body {
+  box-sizing: border-box;
+  background: #000;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.spinners {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 40vmax;
+}
+
+.conic-spinner.normal {
+  animation-direction: normal;
+}
+
+.conic-spinner.reverse {
+  animation-direction: reverse;
+}
+
+.conic-spinner {
+  background: conic-gradient( 
+    black 0deg 90deg, 
+    greenyellow 90deg 180deg, 
+    black 180deg 270deg, 
+    turquoise 270deg
+  );
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin var(--speed) linear var(--delay) infinite;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
