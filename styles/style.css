@@ -58,6 +58,10 @@ ul, li {
   animation: spin var(--speed) linear var(--delay) infinite;
 }
 
+/* .conic-spinner:hover {
+  background: white;
+} */
+
 @keyframes spin {
   0% {
     opacity: 0.1;
