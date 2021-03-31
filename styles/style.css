@@ -61,10 +61,11 @@ ul, li {
   animation-play-state: var(--play-state);
 }
 
+/* workaround for Safari which doesn't support conic-gradient() */
 @media not all and (min-resolution:.001dpcm){ 
   @supports (-webkit-appearance:none) {
   .conic-spinner {
-    background: radial-gradient(circle farthest-corner at 33% 33%, black 0%, hsl(var(--hue-one), 50%, 50%) 80%), radial-gradient(circle farthest-corner at 45% 45%, black 50%, hsl(var(--hue-two), 50%, 50%) 80%);
+    background: radial-gradient(circle farthest-corner at 33% 33%, hsl(var(--hue-two), 50%, 50%) 0%, hsl(var(--hue-one), 50%, 50%) 80%);
   }
 }}
 
