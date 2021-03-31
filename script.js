@@ -29,12 +29,11 @@ $('#border-radius').addEventListener('input', (e) => {
 });
 
 $('#play-state').addEventListener('click', (e) => {
-  const state = playState ? 'paused' : 'running';
-  docElem.style.setProperty('--play-state', state);
-  $('.btn-text').textContent = playState ? 'Play' : 'Pause';
+  playState = playState == 'running' ? 'paused' : 'running';
+  docElem.style.setProperty('--play-state', playState);
+  $('.btn-text').textContent = playState == 'running' ? 'Pause' : 'Play';
   $('.fas').classList.toggle('fa-play');
   $('.fas').classList.toggle('fa-pause');
-  playState = !playState;
 });
 
 $('#speed').addEventListener('input', (e) => {
@@ -52,7 +51,6 @@ if ((chromeAgent && safariAgent) == false) {
   });
 
   $('#speed').addEventListener('mouseup', (e) => {
-    console.log(playState)
     if (playState == 'running') {
       docElem.style.setProperty('--play-state', 'running');
     }

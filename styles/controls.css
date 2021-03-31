@@ -80,7 +80,7 @@ ul.controls > li {
 }
 
 button#play-state {
-  min-width: 72px;
+  min-width: 80px;
 }
 
 .btn:hover {
