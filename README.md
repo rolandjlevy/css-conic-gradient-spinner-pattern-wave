@@ -9,6 +9,19 @@ Experimenting with CSS animation to create an interactive wave pattern.
 - The varied animation delay creates the wave effect
 - The overall speed and colours are controlled by the sliders
 
+### Conic Gradients
+The conic-gradient() CSS function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). [Find out more](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient())
+
+- Here is an example of a conic gradient:
+```css
+background: conic-gradient( 
+  black 0deg 90deg, 
+  red, 50%, 50%) 90deg 180deg, 
+  black 180deg 270deg,
+  orange, 50%, 50%) 270deg
+);
+```
+
 ### Links 🔗
 
 + [Live demo](https://css-conic-gradient-wave-pattern.rolandjlevy.repl.co/)
