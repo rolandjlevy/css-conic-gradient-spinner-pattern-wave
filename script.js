@@ -28,14 +28,6 @@ $('#border-radius').addEventListener('input', (e) => {
   docElem.style.setProperty('--border-radius', e.target.value + '%');
 });
 
-$('#play-state').addEventListener('click', (e) => {
-  playState = playState == 'running' ? 'paused' : 'running';
-  docElem.style.setProperty('--play-state', playState);
-  $('.btn-text').textContent = playState == 'running' ? 'Pause' : 'Play';
-  $('.fas').classList.toggle('fa-play');
-  $('.fas').classList.toggle('fa-pause');
-});
-
 $('#shape').addEventListener('input', (e) => {
   docElem.style.setProperty('--shape', e.target.value + "deg");
 });
@@ -60,3 +52,15 @@ if ((chromeAgent && safariAgent) == false) {
     }
   });
 }
+
+$('#play-state').addEventListener('click', (e) => {
+  playState = playState == 'running' ? 'paused' : 'running';
+  docElem.style.setProperty('--play-state', playState);
+  $('.btn-text').textContent = playState == 'running' ? 'Pause' : 'Play';
+  $('.fas').classList.toggle('fa-play');
+  $('.fas').classList.toggle('fa-pause');
+});
+
+$('#about').addEventListener('click', (e) => {
+  window.open('https://rolandlevy.co.uk/', '_blank');
+});

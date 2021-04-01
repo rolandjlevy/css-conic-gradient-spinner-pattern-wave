@@ -26,6 +26,10 @@ ul.controls > li {
   justify-content: space-between;
 }
 
+ul.controls > li.control-buttons {
+  width: auto;
+}
+
 .slider {
   position: relative;
   -webkit-appearance: none;

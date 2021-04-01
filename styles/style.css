@@ -133,10 +133,17 @@ ul, li {
   }
 }
 
+.m-r-3 {
+  margin-right: 3px;
+}
+
 .m-r-5 {
   margin-right: 5px;
 }
 
+.m-l-10 {
+  margin-left: 10px;
+}
 
 .m-t-0 {
   margin-top: 0;
