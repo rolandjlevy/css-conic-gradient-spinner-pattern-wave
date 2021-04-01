@@ -4,9 +4,9 @@ This is a CSS animation experiment which started with just one spinning Conic Gr
 
 ### Links 🔗
 
-+ [Live demo](https://css-conic-gradient-wave-pattern.rolandjlevy.repl.co/)
-+ [Source code](https://replit.com/@RolandJLevy/css-conic-gradient-wave-pattern)
-+ [Github repo](https://github.com/rolandjlevy/css-conic-gradient-spinner-pattern-wave)
++ [Play live demo](https://css-conic-gradient-wave-pattern.rolandjlevy.repl.co/)
++ [See source code](https://replit.com/@RolandJLevy/css-conic-gradient-wave-pattern)
++ [Explore Github repo](https://github.com/rolandjlevy/css-conic-gradient-spinner-pattern-wave)
 
 ![Spinners](https://raw.githubusercontent.com/rolandjlevy/css-conic-gradient-spinner-pattern-wave/master/images/spinner-wave-pattern.png)
 
