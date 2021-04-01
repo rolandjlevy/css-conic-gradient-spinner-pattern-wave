@@ -60,7 +60,3 @@ $('#play-state').addEventListener('click', (e) => {
   $('.fas').classList.toggle('fa-play');
   $('.fas').classList.toggle('fa-pause');
 });
-
-$('#about').addEventListener('click', (e) => {
-  window.open('https://rolandlevy.co.uk/', '_blank');
-});

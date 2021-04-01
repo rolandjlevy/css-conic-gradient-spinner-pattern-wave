@@ -22,10 +22,10 @@ The conic-gradient() CSS function creates an image consisting of a gradient with
 
 - Here is an example of a conic gradient:
 ```css
- background: conic-gradient( 
+background: conic-gradient( 
   black 0deg 90deg, 
-  green, 90deg 180deg, 
+  green 90deg 180deg, 
   black 180deg 270deg,
-  turquoise, 270deg
+  turquoise 270deg
 );
 ```
