@@ -1,12 +1,12 @@
 :root {
   --speed: 0.8s;
-  --dir: 1;
   --delay: 0s;
   --border-radius: 50%;
   --hue-offset: 60;
   --hue-one: 90;
   --hue-two: calc(var(--hue-one) + var(--hue-offset));
   --opacity-start: 0.1;
+  --scale-from: 0.75;
   --play-state: running;
 }
 
@@ -53,12 +53,43 @@ ul, li {
     black 180deg 270deg,
     hsl(var(--hue-two), 50%, 50%) 270deg
   );
+  display: inline-block;
   mix-blend-mode: screen;
   border-radius: var(--border-radius);
   width: 6vmin;
   height: 6vmin;
   animation: spin var(--speed) linear var(--delay) infinite;
   animation-play-state: var(--play-state);
+}
+
+.conic-spinner.control {
+  width: var(--spinner-control-size);
+  height: var(--spinner-control-size);
+  --delay: 0s;
+  --opacity-start: 1;
+  --scale-from: 1;
+  margin-left: 10px;
+  margin-bottom: 1px;
+}
+
+.conic-spinner.control.speed,
+.conic-spinner.control.border-radius {
+  background: conic-gradient( 
+    black 0deg 90deg, 
+    var(--mid) 90deg 180deg, 
+    black 180deg 270deg,
+    var(--mid) 270deg
+  );
+}
+
+.conic-spinner.control.speed,
+.conic-spinner.control.colour {
+  --border-radius: 50%;
+}
+
+.conic-spinner.control.colour,
+.conic-spinner.control.border-radius {
+  --speed: 0s;
 }
 
 /* workaround for Safari which doesn't support conic-gradient() */
@@ -72,7 +103,7 @@ ul, li {
 @keyframes spin {
   0% {
     opacity: var(--opacity-start);
-    transform: rotate(0deg) scale(0.75);
+    transform: rotate(0deg) scale(var(--scale-from));
   }
   50% {
     opacity: 1;
@@ -80,7 +111,7 @@ ul, li {
   }
   100% {
     opacity: var(--opacity-start);
-    transform: rotate(360deg) scale(0.75);
+    transform: rotate(360deg) scale(var(--scale-from));
   }
 }
 

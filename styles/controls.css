@@ -7,6 +7,7 @@
   --black: hsl(260, 10%, 5%);
   --slider-width: 150px;
   --slider-offset: calc(50px / 2); /* label width/2 */
+  --spinner-control-size: 20px;
 }
 
 ul.controls {
@@ -17,7 +18,11 @@ ul.controls {
 }
 
 ul.controls > li {
-  width: var(--slider-width);
+  width: calc(var(--slider-width) + var(--spinner-control-size) + 10px);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .slider {
@@ -62,7 +67,7 @@ ul.controls > li {
 .slider ~ label {
   position: relative;
   left: 0;  
-  bottom: 40px;
+  bottom: 42px;
   font-size: 0.875rem;
 }
 
