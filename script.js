@@ -36,6 +36,10 @@ $('#play-state').addEventListener('click', (e) => {
   $('.fas').classList.toggle('fa-pause');
 });
 
+$('#shape').addEventListener('input', (e) => {
+  docElem.style.setProperty('--shape', e.target.value + "deg");
+});
+
 $('#speed').addEventListener('input', (e) => {
   const speed = Number(maxSpeed) + Number(minSpeed) - Number(e.target.value);
   docElem.style.setProperty('--speed', speed.toFixed(2).toString() + "s");

@@ -6,8 +6,9 @@
   --hue-one: 90;
   --hue-two: calc(var(--hue-one) + var(--hue-offset));
   --opacity-start: 0.1;
-  --scale-from: 0.75;
+  --scale-from: 1;
   --play-state: running;
+  --shape: 90deg;
 }
 
 body {
@@ -48,10 +49,10 @@ ul, li {
 
 .conic-spinner {
   background: conic-gradient( 
-    black 0deg 90deg, 
-    hsl(var(--hue-one), 50%, 50%) 90deg 180deg, 
-    black 180deg 270deg,
-    hsl(var(--hue-two), 50%, 50%) 270deg
+    black 0deg var(--shape),
+    hsl(var(--hue-one), 50%, 50%) var(--shape) 180deg,
+    black calc(var(--shape) + 90deg) calc(var(--shape) + 180deg),
+    hsl(var(--hue-two), 50%, 50%) calc(var(--shape) + 180deg)
   );
   display: inline-block;
   mix-blend-mode: screen;
@@ -82,14 +83,31 @@ ul, li {
   );
 }
 
+.conic-spinner.control.shape {
+  background: conic-gradient( 
+    black 0deg var(--shape),
+    var(--mid) var(--shape) 180deg, 
+    black calc(var(--shape) + 90deg) calc(var(--shape) + 180deg),
+    var(--mid) calc(var(--shape) + 180deg)
+  );
+}
+
 .conic-spinner.control.speed,
-.conic-spinner.control.colour {
+.conic-spinner.control.colour,
+.conic-spinner.control.shape {
   --border-radius: 50%;
 }
 
 .conic-spinner.control.colour,
-.conic-spinner.control.border-radius {
+.conic-spinner.control.border-radius,
+.conic-spinner.control.shape {
   --speed: 0s;
+}
+
+.conic-spinner.control.colour,
+.conic-spinner.control.border-radius,
+.conic-spinner.control.speed {
+  --shape: 90deg;
 }
 
 /* workaround for Safari which doesn't support conic-gradient() */

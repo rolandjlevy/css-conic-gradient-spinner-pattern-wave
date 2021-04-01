@@ -1,6 +1,6 @@
 # Interactive wave pattern 🍃
 
-Experimenting with CSS animation to create an interactive wave pattern. 
+This is a CSS animation experiment which started with just one spinning Conic Gradient and developed from getting more and more ideas, trying to make the wave pattern engaging and interesting to play with.
 
 ### Links 🔗
 
@@ -11,11 +11,11 @@ Experimenting with CSS animation to create an interactive wave pattern.
 ![Spinners](https://raw.githubusercontent.com/rolandjlevy/css-conic-gradient-spinner-pattern-wave/master/images/spinner-wave-pattern.png)
 
 ### How it works ⚙️
-- The grid is made up of spinning circles or spinners
-- Each spinner uses a conic-gradient background to make a 4-quartered circle
+- The grid is made up of 100 spinning circles
+- Each circle uses a conic-gradient background to make a 4-quartered circle
 - With each 360 degree rotation the opacity transitions from 0 to 1
 - The varied animation delay creates the wave effect
-- The overall speed and colours are controlled by the sliders
+- The overall speed, colour, corners and shape are controlled by the sliders
 
 ### Conic Gradients
 The conic-gradient() CSS function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). [Find out more](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient())
