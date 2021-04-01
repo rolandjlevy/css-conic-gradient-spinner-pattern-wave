@@ -6,9 +6,9 @@ This is a CSS animation experiment which started with just one spinning Conic Gr
 
 + [Play live demo](https://css-conic-gradient-wave-pattern.rolandjlevy.repl.co/)
 + [See source code](https://replit.com/@RolandJLevy/css-conic-gradient-wave-pattern)
-+ [Explore Github repo](https://github.com/rolandjlevy/css-conic-gradient-spinner-pattern-wave)
++ [Explore Github repo](https://github.com/rolandjlevy/css-conic-gradient-wave-pattern)
 
-![Spinners](https://raw.githubusercontent.com/rolandjlevy/css-conic-gradient-spinner-pattern-wave/master/images/spinner-wave-pattern.png)
+![Spinners](https://raw.githubusercontent.com/rolandjlevy/css-conic-gradient-wave-pattern/master/images/spinner-wave-pattern.png)
 
 ### How it works ⚙️
 - The grid is made up of 100 spinning circles
