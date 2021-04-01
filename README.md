@@ -1,6 +1,6 @@
 # Interactive wave pattern 🍃
 
-This is a CSS animation experiment which started with just one spinning Conic Gradient and developed from getting more and more ideas, trying to make the wave pattern engaging and interesting to play with.
+This is a CSS animation experiment which started with just one spinning Conic Gradient circle and developed from getting more and more ideas, trying to make the wave pattern engaging and interesting to play with.
 
 ### Links 🔗
 
