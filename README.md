@@ -11,7 +11,7 @@ This is a CSS animation experiment which started with just one spinning Conic Gr
 ![Spinners](https://raw.githubusercontent.com/rolandjlevy/css-conic-gradient-wave-pattern/master/images/spinner-wave-pattern.png)
 
 ### How it works ⚙️
-- The grid is made up of 100 spinning circles
+- The grid pattern is made up of 100 spinning circles
 - Each circle uses a conic-gradient background to make a 4-quartered circle
 - With each 360 degree rotation the opacity transitions from 0 to 1
 - The varied animation delay creates the wave effect
