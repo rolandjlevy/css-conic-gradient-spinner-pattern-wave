@@ -1,7 +1,8 @@
 const $ = (el) => document.querySelector(el);
+const $$ = (el) => document.querySelectorAll(el);
 const docElem = document.documentElement;
 const getCSSVar = (prop) => getComputedStyle(docElem).getPropertyValue(prop).trim();
-const randomNum = (min, max) => Number((Math.random() * (max - min) + min).toFixed(2));
+const randomNum = (min, max) => Math.random() * (max - min) + min;
 
 const maxSpeed = $('#speed').max;
 const minSpeed = $('#speed').min;
@@ -19,34 +20,49 @@ while (counter++ < amount) {
   $('.spinners').appendChild(li);
 }
 
+// create slider objects
+const sliders = {};
+$$('ul.controls > li > section > input.slider').forEach(item => {
+  const { id, min, max, value } = item;
+  sliders[id] = { min, max, value };
+});
+
+function randomise() {
+  Object.entries(sliders).forEach(([id, obj]) => {
+    $(`#${id}`).value = randomNum(obj.min, obj.max);
+    $(`#${id}`).dispatchEvent(new Event('input'));
+  });
+}
+// randomise();
+
 $('#colour').addEventListener('input', (e) => {
   const hueOne = e.target.value;
   const hueTwo = (Number(e.target.value) + Number(hueOffset)) % maxHue;
-  // console.log({hueOne, hueTwo});
   docElem.style.setProperty('--hue-one', hueOne);
   docElem.style.setProperty('--hue-two', hueTwo);
+  // console.log({hueOne, hueTwo});
 });
 
 $('#border-radius').addEventListener('input', (e) => {
-  // console.log({'border-radius value':e.target.value});
   docElem.style.setProperty('--border-radius', e.target.value + '%');
+  // console.log({'border-radius value':e.target.value});
 });
 
 $('#shape').addEventListener('input', (e) => {
-  // console.log({'shape value':e.target.value});
   docElem.style.setProperty('--shape', e.target.value + "deg");
+  // console.log({'shape value':e.target.value});
 });
 
 $('#speed').addEventListener('input', (e) => {
   const speed = Number(maxSpeed) + Number(minSpeed) - Number(e.target.value);
-  // console.log({speed});
   docElem.style.setProperty('--speed', speed.toFixed(2).toString() + "s");
+  // console.log({speed});
 });
 
+// workaround for Safari input event non-detection
 const chromeAgent = navigator.userAgent.indexOf('Chrome') > -1;
 const safariAgent = navigator.userAgent.indexOf('Safari') > -1;
 
-// workaround for Safari input event non-detection
 if ((chromeAgent && safariAgent) == false) {
   $('#speed').addEventListener('mousedown', (e) => {
     docElem.style.setProperty('--play-state', 'paused');
