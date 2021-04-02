@@ -2,7 +2,7 @@ const $ = (el) => document.querySelector(el);
 const $$ = (el) => document.querySelectorAll(el);
 const docElem = document.documentElement;
 const getCSSVar = (prop) => getComputedStyle(docElem).getPropertyValue(prop).trim();
-const randomNum = (min, max) => Math.random() * (max - min) + min;
+const randomNum = (min, max) => Number(Math.random() * (max - min) + min).toFixed(2);
 
 const maxSpeed = $('#speed').max;
 const minSpeed = $('#speed').min;
@@ -19,21 +19,6 @@ while (counter++ < amount) {
   li.classList = `conic-spinner ${dir}`;
   $('.spinners').appendChild(li);
 }
-
-// create slider objects
-const sliders = {};
-$$('ul.controls > li > section > input.slider').forEach(item => {
-  const { id, min, max, value } = item;
-  sliders[id] = { min, max, value };
-});
-
-function randomise() {
-  Object.entries(sliders).forEach(([id, obj]) => {
-    $(`#${id}`).value = randomNum(obj.min, obj.max);
-    $(`#${id}`).dispatchEvent(new Event('input'));
-  });
-}
-// randomise();
 
 $('#colour').addEventListener('input', (e) => {
   const hueOne = e.target.value;
@@ -81,4 +66,19 @@ $('#play-state').addEventListener('click', (e) => {
   $('.btn-text').textContent = playState == 'running' ? 'Pause' : 'Play';
   $('.fas').classList.toggle('fa-play');
   $('.fas').classList.toggle('fa-pause');
+});
+
+// create slider objects
+const sliders = {};
+$$('ul.controls > li > section > input.slider').forEach(item => {
+  const { id, min, max, value } = item;
+  sliders[id] = { min, max, value };
+});
+
+// randomise settings
+$('#randomise').addEventListener('click', (e) => {
+  Object.entries(sliders).forEach(([id, obj]) => {
+    $(`#${id}`).value = randomNum(Number(obj.min), Number(obj.max));
+    $(`#${id}`).dispatchEvent(new Event('input'));
+  });
 });
