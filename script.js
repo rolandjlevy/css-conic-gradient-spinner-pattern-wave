@@ -12,6 +12,7 @@ let playState = getCSSVar('--play-state');
 const amount = 100;
 let counter = 0;
 
+// create the 100 li elements
 while (counter++ < amount) {
   const li = document.createElement('li');
   li.style.setProperty('--delay', `-${counter/12}s`);
@@ -25,23 +26,19 @@ $('#colour').addEventListener('input', (e) => {
   const hueTwo = (Number(e.target.value) + Number(hueOffset)) % maxHue;
   docElem.style.setProperty('--hue-one', hueOne);
   docElem.style.setProperty('--hue-two', hueTwo);
-  // console.log({hueOne, hueTwo});
 });
 
 $('#border-radius').addEventListener('input', (e) => {
   docElem.style.setProperty('--border-radius', e.target.value + '%');
-  // console.log({'border-radius value':e.target.value});
 });
 
 $('#shape').addEventListener('input', (e) => {
   docElem.style.setProperty('--shape', e.target.value + "deg");
-  // console.log({'shape value':e.target.value});
 });
 
 $('#speed').addEventListener('input', (e) => {
   const speed = Number(maxSpeed) + Number(minSpeed) - Number(e.target.value);
   docElem.style.setProperty('--speed', speed.toFixed(2).toString() + "s");
-  // console.log({speed});
 });
 
 // workaround for Safari input event non-detection
@@ -54,9 +51,7 @@ if ((chromeAgent && safariAgent) == false) {
   });
 
   $('#speed').addEventListener('mouseup', (e) => {
-    if (playState == 'running') {
-      docElem.style.setProperty('--play-state', 'running');
-    }
+    if (playState == 'running') docElem.style.setProperty('--play-state', 'running');
   });
 }
 
