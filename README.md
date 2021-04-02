@@ -16,6 +16,7 @@ This is a CSS animation experiment which started with just one spinning Conic Gr
 - With each 360 degree rotation the opacity transitions from 0 to 1
 - The varied animation delay creates the wave effect
 - The overall speed, colour, corners and shape are controlled by the sliders
+- The animation can be paused and randomised
 
 ### Conic Gradients
 The conic-gradient() CSS function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). [Find out more](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient())
