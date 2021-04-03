@@ -8,7 +8,7 @@ This is a CSS animation experiment which started with just one spinning Conic Gr
 + [See source code](https://replit.com/@RolandJLevy/css-conic-gradient-wave-pattern)
 + [Explore Github repo](https://github.com/rolandjlevy/css-conic-gradient-wave-pattern)
 
-![Spinners](https://raw.githubusercontent.com/rolandjlevy/css-conic-gradient-wave-pattern/master/images/spinner-wave-pattern.png)
+![Spinners](https://raw.githubusercontent.com/rolandjlevy/css-conic-gradient-wave-pattern/master/images/wave.png)
 
 ### How it works ⚙️
 - The wave pattern is made up of 100 spinning circles
