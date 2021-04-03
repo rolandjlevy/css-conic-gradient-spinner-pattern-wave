@@ -16,7 +16,14 @@ body {
   background: #00001d;
   color: var(--mid);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  margin: 30px;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--mid);
+  letter-spacing: 1px;
 }
 
 ul, li {
@@ -207,3 +214,12 @@ ul, li {
 .m-t-40 {
   margin-top: 40px;
 }
+
+.m-b-20 {
+  margin-bottom: 20px;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
+}
+
