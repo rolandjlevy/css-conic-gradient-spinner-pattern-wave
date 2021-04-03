@@ -25,8 +25,7 @@ export default class Buttons {
         const rand = Utils.randomNum(Number(obj.min), Number(obj.max));
         UI.$(`#${id}`).value = Number(rand);
         if (this.isSafari && id == 'speed') {
-          this.triggerEvent(UI.$(`#${id}`), 'mousedown');
-          this.triggerEvent(UI.$(`#${id}`), 'mouseup');
+          this.triggerEvent(UI.$(`#${id}`), 'change');
         } else {
           this.triggerEvent(UI.$(`#${id}`), 'input');
         }

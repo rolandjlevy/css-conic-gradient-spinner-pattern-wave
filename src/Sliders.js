@@ -30,5 +30,11 @@ export default class Sliders {
       const speed = Number(max) + Number(min) - Number(e.target.value);
       UI.docElem().style.setProperty('--speed', speed.toFixed(2).toString() + "s");
     });
+    
+    UI.$('#speed').addEventListener('change', (e) => {
+      const { min, max } = this.inputs['speed'];
+      const speed = Number(max) + Number(min) - Number(e.target.value);
+      UI.docElem().style.setProperty('--speed', speed.toFixed(2).toString() + "s");
+    });
   }
 }
