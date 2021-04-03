@@ -2,13 +2,13 @@
   --speed: 0.8s;
   --delay: 0s;
   --border-radius: 50%;
-  --hue-offset: 60;
-  --hue-one: 90;
+  --hue-offset: 30;
+  --hue-one: 180;
   --hue-two: calc(var(--hue-one) + var(--hue-offset));
   --opacity-start: 0.1;
   --scale-from: 1;
   --play-state: running;
-  --shape: 90deg;
+  --shape: 50deg;
 }
 
 body {
@@ -16,6 +16,7 @@ body {
   background: #00001d;
   color: var(--mid);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 ul, li {
@@ -36,7 +37,10 @@ ul, li {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  width: 60vmin;
+  height: 60vmin;
   max-width: 60vmin;
+  max-height: 60vmin;
 }
 
 .conic-spinner.normal {
@@ -113,10 +117,18 @@ ul, li {
 /* workaround for Safari which doesn't support conic-gradient() */
 @media not all and (min-resolution:.001dpcm){ 
   @supports (-webkit-appearance:none) {
-  .conic-spinner {
-    background: radial-gradient(circle farthest-corner at 33% 33%, hsl(var(--hue-two), 50%, 50%) 0%, hsl(var(--hue-one), 50%, 50%) 80%);
+    .conic-spinner {
+      background: radial-gradient(circle farthest-corner at 33% 33%, hsl(var(--hue-two), 50%, 50%) 0%, hsl(var(--hue-one), 50%, 50%) 80%);
+    }
+    .conic-spinner.control.speed,
+    .conic-spinner.control.border-radius {
+      background: radial-gradient(circle farthest-corner at 33% 33%, var(--light-mid) 0%, var(--deep) 80%);
+    }
+    ul.controls > li.hide-in-safari {
+      display: none;
+    }
   }
-}}
+}
 
 @keyframes spin {
   0% {
@@ -132,6 +144,29 @@ ul, li {
     transform: rotate(360deg) scale(var(--scale-from));
   }
 }
+
+/**************/
+/* Animations */
+/**************/
+
+.fade-in {
+  animation: fadeInAnimation ease-in 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes fadeInAnimation { 
+  0% { 
+    opacity: 0;
+  } 
+  100% { 
+    opacity: 1;
+  } 
+} 
+
+/**********/
+/* Layout */
+/**********/
 
 .m-r-3 {
   margin-right: 3px;
