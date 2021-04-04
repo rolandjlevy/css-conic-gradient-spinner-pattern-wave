@@ -2,15 +2,18 @@ import UI from './UI.js';
 
 export default class Sliders {
   constructor() {
-    this.inputs = {};
-    this.hueOffset = UI.getCSSVar('--hue-offset');
-    this.init();
+    this.initInputs();
+    this.addEvents();
   }
-  init() {
+  initInputs() {
+    this.inputs = {};
     UI.$$('ul.controls > li > section > input.slider').forEach(item => {
       const { id, min, max } = item;
       this.inputs[id] = { min, max };
     });
+  }
+  addEvents() {
+    this.hueOffset = UI.getCSSVar('--hue-offset');
     UI.$('#colour').addEventListener('input', (e) => {
       const hueTwo = (Number(e.target.value) + Number(this.hueOffset)) % this.inputs['colour'].max;
       UI.docElem().style.setProperty('--hue-one', e.target.value);
@@ -25,16 +28,13 @@ export default class Sliders {
       UI.docElem().style.setProperty('--shape', e.target.value + "deg");
     });
 
-    UI.$('#speed').addEventListener('input', (e) => {
-      const { min, max } = this.inputs['speed'];
-      const speed = Number(max) + Number(min) - Number(e.target.value);
-      UI.docElem().style.setProperty('--speed', speed.toFixed(2).toString() + "s");
-    });
-    
-    UI.$('#speed').addEventListener('change', (e) => {
-      const { min, max } = this.inputs['speed'];
-      const speed = Number(max) + Number(min) - Number(e.target.value);
-      UI.docElem().style.setProperty('--speed', speed.toFixed(2).toString() + "s");
-    });
+    ['input', 'change'].forEach(eventType => {
+      UI.$('#speed').addEventListener(eventType, (e) => {
+        const { min, max } = this.inputs['speed'];
+        const speed = Number(max) + Number(min) - Number(e.target.value);
+        UI.docElem().style.setProperty('--speed', speed.toFixed(2).toString() + "s");
+      });
+    })
   }
+
 }

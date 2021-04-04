@@ -24,11 +24,8 @@ export default class Buttons {
       Object.entries(inputs).forEach(([id, obj]) => {
         const rand = Utils.randomNum(Number(obj.min), Number(obj.max));
         UI.$(`#${id}`).value = Number(rand);
-        if (this.isSafari && id == 'speed') {
-          this.triggerEvent(UI.$(`#${id}`), 'change');
-        } else {
-          this.triggerEvent(UI.$(`#${id}`), 'input');
-        }
+        const eventType = (this.isSafari && id == 'speed') ? 'change' : 'input';
+        this.triggerEvent(UI.$(`#${id}`), eventType);
       });
     });
     // workaround for Safari input event not being detected
