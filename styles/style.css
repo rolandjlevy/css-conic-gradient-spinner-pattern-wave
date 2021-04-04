@@ -10,6 +10,7 @@
   --play-state: running;
   --shape: 50deg;
   --body-margin: 30px;
+  --spinner-size: 5;
 }
 
 body {
@@ -41,17 +42,18 @@ ul, li {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  max-height: calc(100vh - var(--body-margin) * 2)
+  height: calc(100vh - var(--body-margin) * 2)
 }
 
 .spinners {
+  --size: calc(var(--spinner-size) * 10vmin);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 60vmin;
-  height: 60vmin;
-  max-width: 60vmin;
-  max-height: 60vmin;
+  width: var(--size);
+  height: var(--size);
+  max-width: var(--size);
+  max-height: var(--size);
 }
 
 .conic-spinner.normal {
@@ -72,8 +74,8 @@ ul, li {
   display: inline-block;
   mix-blend-mode: screen;
   border-radius: var(--border-radius);
-  width: 6vmin;
-  height: 6vmin;
+  width: calc(var(--spinner-size) * 1vmin);
+  height: calc(var(--spinner-size) * 1vmin);
   animation: spin var(--speed) linear var(--delay) infinite;
   animation-play-state: var(--play-state);
 }
