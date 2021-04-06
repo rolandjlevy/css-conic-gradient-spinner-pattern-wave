@@ -11,7 +11,7 @@ export default class App {
     while (this.counter++ < this.amount) {
       const li = document.createElement('li');
       li.style.setProperty('--delay', `-${this.counter/12}s`);
-      const dir = this.counter % 2 ? 'normal' : 'reverse';
+      const dir = this.counter % 2 ? 'normal' : 'normal'; // reverse
       li.classList = `conic-spinner ${dir}`;
       UI.$(`.${this.container}`).appendChild(li);
     }
