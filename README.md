@@ -24,7 +24,7 @@ The [setProperty method](https://developer.mozilla.org/en-US/docs/Web/API/CSSSty
 `document.documentElement.style.setProperty('--speed', '0.5s')`
 
 ### Conic Gradients
-The [conic-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient()) CSS function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center).
+Each spinning circle has a background which is a conic gradient made up of 4 quarter. The [conic-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient()) CSS function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center).
 
 Here is an example of a conic gradient:
 ```css
