@@ -11,6 +11,10 @@ export default class Sliders {
       const { id, min, max } = item;
       this.inputs[id] = { min, max };
     });
+    console.log(this.inputs);
+    const sp = this.inputs['speed']
+    const speed = Number(sp.max) + Number(sp.min) - 1;
+    console.log({speed})
   }
   addEvents() {
     this.hueOffset = UI.getCSSVar('--hue-offset');
@@ -32,6 +36,7 @@ export default class Sliders {
       UI.$('#speed').addEventListener(eventType, (e) => {
         const { min, max } = this.inputs['speed'];
         const speed = Number(max) + Number(min) - Number(e.target.value);
+        console.log({speed})
         UI.docElem().style.setProperty('--speed', speed.toFixed(2).toString() + "s");
       });
     })
