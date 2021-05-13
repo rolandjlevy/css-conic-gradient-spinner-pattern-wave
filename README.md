@@ -1,14 +1,14 @@
 # Wave-pool Simulator 🌊
 
-This is a CSS animation experiment which started with just one spinning Conic Gradient circle and developed from getting more and more ideas, trying to make the wave pattern engaging and interesting to play with.
+This is an animation experiment which started with just one spinning Conic Gradient circle and developed from getting more and more ideas, trying to make the wave pattern engaging and interesting to play with.
 
 ### Links 🔗
 
-+ [Play live demo](https://css-conic-gradient-wave-pattern.rolandjlevy.repl.co/)
-+ [See source code](https://replit.com/@RolandJLevy/css-conic-gradient-wave-pattern)
-+ [Explore Github repo](https://github.com/rolandjlevy/css-conic-gradient-wave-pattern)
++ [Play live demo](https://js-wave-pool-simulator.rolandjlevy.repl.co)
++ [See source code](https://replit.com/@RolandJLevy/js-wave-pool-simulator)
++ [Explore Github repo](https://github.com/rolandjlevy/js-wave-pool-simulator)
 
-![Wave](https://raw.githubusercontent.com/rolandjlevy/css-conic-gradient-wave-pattern/master/images/wave.png)
+![Wave](./images/wave.png)
 
 ### How it works ⚙️
 - The wave pattern is made up of 100 spinning circles
