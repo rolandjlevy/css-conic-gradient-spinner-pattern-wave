@@ -5,7 +5,6 @@ This is an animation experiment which started with just one spinning Conic Gradi
 ### Links 🔗
 
 + [Play live demo](https://js-wave-pool-simulator.vercel.app)
-+ [See source code](https://replit.com/@RolandJLevy/js-wave-pool-simulator)
 + [Explore Github repo](https://github.com/rolandjlevy/js-wave-pool-simulator)
 
 ![Wave](./images/wave.png)
